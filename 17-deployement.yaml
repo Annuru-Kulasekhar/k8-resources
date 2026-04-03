@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Deployement
+metadata:
+  name: nginx
+  labels:
+    project: roboshop
+    purpose: deployement-demo
+    tier: frontend
+    component: frontend
+spec:
+  replicas: 1
+  selector:
+    labels:
+      project: roboshop
+      purpose: deployement-demo
+      tier: frontend
+      component: frontend
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        purpose: deployement-demo
+        tier: frontend
+        component: frontend
+    spec:
+      components:
+      - name: nginx
+        image: nginx:stable-alpine3.23-perl
