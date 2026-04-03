@@ -1,10 +1,10 @@
 apiVersion: apps/v1
-kind: Deployement
+kind: Deployment
 metadata:
   name: nginx
   labels:
     project: roboshop
-    purpose: deployement-demo
+    purpose: deployment-demo
     tier: frontend
     component: frontend
 spec:
@@ -12,14 +12,14 @@ spec:
   selector:
     labels:
       project: roboshop
-      purpose: deployement-demo
+      purpose: deployment-demo
       tier: frontend
       component: frontend
   template:
     metadata:
       labels:
         project: roboshop
-        purpose: deployement-demo
+        purpose: deployment-demo
         tier: frontend
         component: frontend
     spec:
